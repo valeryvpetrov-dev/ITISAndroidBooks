@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:src="@drawable/poster"
+        android:scaleType="centerCrop"
+        android:layout_margin="16dp"
+        />
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/image"
+        android:layout_margin="16dp"
+        android:text="Гарри Поттер"
+        android:textSize="20dp"
+        />
+
+        <TextView
+            android:id="@+id/description_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image"
+            android:layout_below="@id/title_text_view"
+            android:layout_margin="16dp"
+            android:text="Рассказ о маленьком мальчике который попадает"
+            android:textSize="15dp"/>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

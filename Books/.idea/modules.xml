@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Books.iml" filepath="$PROJECT_DIR$/Books.iml" />
+      <module fileurl="file://C:\Users\Admin\AndroidStudioProjects\ITISAndroidBooks\Books\Books.iml" filepath="C:\Users\Admin\AndroidStudioProjects\ITISAndroidBooks\Books\Books.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Admin\AndroidStudioProjects\ITISAndroidBooks\Books\app\app.iml" filepath="C:\Users\Admin\AndroidStudioProjects\ITISAndroidBooks\Books\app\app.iml" />
     </modules>
   </component>
 </project>
