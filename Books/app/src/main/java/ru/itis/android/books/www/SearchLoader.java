@@ -1,10 +1,8 @@
 package ru.itis.android.books.www;
 
-import android.support.v4.content.AsyncTaskLoader;
 import android.content.Context;
+import android.support.v4.content.AsyncTaskLoader;
 
-import retrofit2.Call;
-import ru.itis.android.books.model.bean.SearchResult;
 import ru.itis.android.books.presenter.Presenter;
 import ru.itis.android.books.www.api.ArticleSearchApiInterface;
 
@@ -34,14 +32,21 @@ public class SearchLoader extends AsyncTaskLoader {
         forceLoad();
     }
 
+
     @Override
     public Object loadInBackground() {
         Call<SearchResult> c = searchApiInterface.getArticlesByKeyWord(
                 ArticleSearchApiInterface.fieldLimit,
                 keyWord,
                 ArticleSearchApiInterface.API_KEY);
+        return null;
+    }
+
+   /* @Override
+    public Object loadInBackground() {
+        Call<SearchResult> c = searchApiInterface.getArticlesByKeyWord(keyWord, ArticleSearchApiInterface.API_KEY);
         c.enqueue(presenter);
 
         return null;
-    }
+    }*/
 }

@@ -1,12 +1,9 @@
 package ru.itis.android.books.www.api;
 
-import java.util.Arrays;
-import java.util.List;
-
-import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 import ru.itis.android.books.model.bean.SearchResult;
+import rx.Observable;
 
 /**
  * Created by Users on 21.12.2017.
@@ -22,5 +19,5 @@ public interface ArticleSearchApiInterface {
     List<String> fieldLimit = Arrays.asList("headline", "snippet", "web_url", "multimedia", "pub_date", "byline");
 
     @GET(BASE_URL_PATH)
-    Call<SearchResult> getArticlesByKeyWord(@Query("fl") List<String> fieldLimit, @Query("fq") String keyWord, @Query("api-key") String apiKey);
+    Observable<SearchResult> getArticlesByKeyWord(@Query("fq") String keyWord, @Query("api-key") String apiKey);
 }
