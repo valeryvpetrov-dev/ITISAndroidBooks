@@ -4,6 +4,7 @@ import android.app.Application;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import ru.itis.android.books.www.api.ArticleSearchApiInterface;
 
@@ -24,6 +25,7 @@ public class ArticlesApp extends Application {
                 .client(new OkHttpClient())
                 .baseUrl(ArticleSearchApiInterface.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
 
         searchApiInterface = retrofit.create(ArticleSearchApiInterface.class);

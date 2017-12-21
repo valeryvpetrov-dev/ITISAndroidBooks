@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ru.itis.android.books.model.bean.Article;
-import ru.itis.android.books.model2.table.ArgTable;
+import ru.itis.android.books.model.table.ArticleTable;
 
 /**
  * Created by Ruslan on 21.12.2017.
@@ -25,10 +25,10 @@ public class ArticleWrapper extends CursorWrapper {
     private Article getArticle(){
         if(!isBeforeFirst() && !isAfterLast()) {
 
-            String headLine = getString(getColumnIndex(ArgTable.COLUMN_HEADLINE));
-            String snippet = getString(getColumnIndex(ArgTable.COLUMN_SNIPPET));
-            String webUrl = getString(getColumnIndex(ArgTable.COLUMN_ARTICLE_URL));
-            String imageUrl = getString(getColumnIndex(ArgTable.COLUMN_IMAGE_URL));
+            String headLine = getString(getColumnIndex(ArticleTable.COLUMN_HEADLINE));
+            String snippet = getString(getColumnIndex(ArticleTable.COLUMN_SNIPPET));
+            String webUrl = getString(getColumnIndex(ArticleTable.COLUMN_ARTICLE_URL));
+            String imageUrl = getString(getColumnIndex(ArticleTable.COLUMN_IMAGE_URL));
 
             return new Article(headLine,snippet,webUrl,imageUrl);
         }

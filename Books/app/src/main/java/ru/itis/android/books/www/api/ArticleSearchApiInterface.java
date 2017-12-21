@@ -1,9 +1,9 @@
 package ru.itis.android.books.www.api;
 
-import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 import ru.itis.android.books.model.bean.SearchResult;
+import rx.Observable;
 
 /**
  * Created by Users on 21.12.2017.
@@ -17,5 +17,5 @@ public interface ArticleSearchApiInterface {
     String BASE_URL_PATH = "svc/search/v2/articlesearch.json";
 
     @GET(BASE_URL_PATH)
-    Call<SearchResult> getArticlesByKeyWord(@Query("fq") String keyWord, @Query("api-key") String apiKey);
+    Observable<SearchResult> getArticlesByKeyWord(@Query("fq") String keyWord, @Query("api-key") String apiKey);
 }
