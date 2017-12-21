@@ -12,9 +12,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import ru.itis.android.books.app.ArticlesApp;
+import ru.itis.android.books.model.bean.SearchResult;
 import ru.itis.android.books.model.surrogate.LoaderSearchResult;
 import ru.itis.android.books.www.SearchLoader;
-import ru.itis.android.books.model.bean.SearchResult;
 import ru.itis.android.books.model.surrogate.SearchResultWrapper;
 import ru.itis.android.books.view.ArticleListViewInterface;
 

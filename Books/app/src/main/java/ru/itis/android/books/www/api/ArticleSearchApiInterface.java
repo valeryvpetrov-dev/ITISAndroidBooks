@@ -1,5 +1,8 @@
 package ru.itis.android.books.www.api;
 
+import java.util.Arrays;
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -16,6 +19,8 @@ public interface ArticleSearchApiInterface {
     String BASE_URL = "http://api.nytimes.com/";
     String BASE_URL_PATH = "svc/search/v2/articlesearch.json";
 
+    List<String> fieldLimit = Arrays.asList("headline", "snippet", "web_url", "multimedia", "pub_date", "byline");
+
     @GET(BASE_URL_PATH)
-    Call<SearchResult> getArticlesByKeyWord(@Query("fq") String keyWord, @Query("api-key") String apiKey);
+    Call<SearchResult> getArticlesByKeyWord(@Query("fl") List<String> fieldLimit, @Query("fq") String keyWord, @Query("api-key") String apiKey);
 }

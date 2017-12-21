@@ -14,9 +14,6 @@ public class Byline {
     @SerializedName("original")
     @Expose
     private String original;
-    @SerializedName("person")
-    @Expose
-    private List<String> person = new ArrayList<String>();
 
     public String getOrganization() {
         return organization;
@@ -33,13 +30,4 @@ public class Byline {
     public void setOriginal(String original) {
         this.original = original;
     }
-
-    public List<String> getPerson() {
-        return person;
-    }
-
-    public void setPerson(List<String> person) {
-        this.person = person;
-    }
-
 }
