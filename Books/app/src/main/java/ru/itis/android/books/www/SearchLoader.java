@@ -35,6 +35,10 @@ public class SearchLoader extends AsyncTaskLoader {
 
     @Override
     public Object loadInBackground() {
+        Call<SearchResult> c = searchApiInterface.getArticlesByKeyWord(
+                ArticleSearchApiInterface.fieldLimit,
+                keyWord,
+                ArticleSearchApiInterface.API_KEY);
         return null;
     }
 

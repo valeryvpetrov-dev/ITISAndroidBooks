@@ -1,6 +1,19 @@
 package ru.itis.android.books.presenter;
 
 import android.app.Application;
+import android.os.Bundle;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.Loader;
+
+import java.io.IOException;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import ru.itis.android.books.app.ArticlesApp;
+import ru.itis.android.books.model.bean.SearchResult;
+import ru.itis.android.books.model.surrogate.LoaderSearchResult;
+import ru.itis.android.books.www.SearchLoader;
 import android.database.Cursor;
 import android.support.annotation.NonNull;
 

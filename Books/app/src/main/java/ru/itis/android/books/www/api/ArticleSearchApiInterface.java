@@ -16,6 +16,8 @@ public interface ArticleSearchApiInterface {
     String BASE_URL = "http://api.nytimes.com/";
     String BASE_URL_PATH = "svc/search/v2/articlesearch.json";
 
+    List<String> fieldLimit = Arrays.asList("headline", "snippet", "web_url", "multimedia", "pub_date", "byline");
+
     @GET(BASE_URL_PATH)
     Observable<SearchResult> getArticlesByKeyWord(@Query("fq") String keyWord, @Query("api-key") String apiKey);
 }
