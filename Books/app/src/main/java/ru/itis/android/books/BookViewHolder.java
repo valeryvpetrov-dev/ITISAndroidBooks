@@ -17,7 +17,13 @@ public class BookViewHolder extends RecyclerView.ViewHolder {
 
     public TextView description;
 
-    public BookViewHolder(View itemView) {
+    public BookViewHolder(View itemView, OnArticleClickListener listener) {
         super(itemView);
+
+        image = itemView.findViewById(R.id.image_view1);
+
+        title = itemView.findViewById(R.id.title_text_view);
+
+        description = itemView.findViewById(R.id.description_text_view);
     }
 }
