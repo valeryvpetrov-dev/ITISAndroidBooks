@@ -1,4 +1,4 @@
-package ru.itis.android.books.model.surrogate;
+package ru.itis.android.books.model.bean.surrogate;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,6 +13,7 @@ import ru.itis.android.books.model.bean.Article;
 import ru.itis.android.books.model.bean.Doc;
 import ru.itis.android.books.model.bean.Multimedium;
 import ru.itis.android.books.model.bean.SearchResult;
+import ru.itis.android.books.www.search.ArticleSearchApiInterface;
 
 /**
  * Created by Users on 21.12.2017.
@@ -71,7 +72,7 @@ public class SearchResultWrapper {
 
     private String getImageUrl(List<Multimedium> multimedia) {
         if (multimedia.size() != 0) {
-            return multimedia.get(0).getUrl(); // URL изображения статьи
+            return ArticleSearchApiInterface.URL_HOST_IMAGE + multimedia.get(0).getUrl(); // URL изображения статьи
         } else {
             return null;
         }

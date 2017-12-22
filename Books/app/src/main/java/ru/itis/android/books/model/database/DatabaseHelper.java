@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import ru.itis.android.books.model.table.ArticleTable;
+import ru.itis.android.books.model.database.table.ArticleTable;
 
 /**
  * Created by Ruslan on 21.12.2017.
@@ -12,7 +12,7 @@ import ru.itis.android.books.model.table.ArticleTable;
 
 public class DatabaseHelper extends SQLiteOpenHelper{
 
-    private static final String DB_NAME = "db.db";
+    private static final String DB_NAME = "articlesproject.db";
 
     private static final int DB_VERSION = 1;
 

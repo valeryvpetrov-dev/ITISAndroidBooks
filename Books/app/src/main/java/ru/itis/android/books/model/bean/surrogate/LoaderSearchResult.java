@@ -1,8 +1,6 @@
-package ru.itis.android.books.model.surrogate;
+package ru.itis.android.books.model.bean.surrogate;
 
 import android.support.annotation.Nullable;
-
-import ru.itis.android.books.model.surrogate.SearchResultWrapper;
 
 /**
  * Created by Users on 21.12.2017.

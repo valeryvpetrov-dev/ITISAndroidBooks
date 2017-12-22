@@ -6,7 +6,7 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import ru.itis.android.books.www.api.ArticleSearchApiInterface;
+import ru.itis.android.books.www.search.ArticleSearchApiInterface;
 
 /**
  * Created by Users on 21.12.2017.

@@ -65,11 +65,12 @@ public class Article {
         this.snippet = snippet;
     }
 
+    @Nullable
     public String getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(@Nullable String author) {
         this.author = author;
     }
 

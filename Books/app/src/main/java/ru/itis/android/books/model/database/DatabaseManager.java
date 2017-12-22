@@ -7,10 +7,11 @@ import android.support.annotation.NonNull;
 import com.squareup.sqlbrite.BriteDatabase;
 import com.squareup.sqlbrite.SqlBrite;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import ru.itis.android.books.model.bean.Article;
-import ru.itis.android.books.model.table.ArticleTable;
+import ru.itis.android.books.model.database.table.ArticleTable;
 import rx.Observable;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
@@ -45,6 +46,10 @@ public class DatabaseManager {
                         contentValues.put(ArticleTable.COLUMN_SNIPPET,article.getSnippet());
                         contentValues.put(ArticleTable.COLUMN_ARTICLE_URL,article.getWebURL());
                         contentValues.put(ArticleTable.COLUMN_IMAGE_URL,article.getImageURL());
+                        contentValues.put(ArticleTable.COLUMN_AUTHOR,article.getAuthor());
+                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+                        String pubDateString = format.format(article.getPublicationDate());
+                        contentValues.put(ArticleTable.COLUMN_PUBLICATION_DATE,pubDateString);
                         return database.insert(ArticleTable.NAME, contentValues);
                     }
                 });
@@ -52,6 +57,6 @@ public class DatabaseManager {
 
     @NonNull
     public Observable<SqlBrite.Query> getArticlesSelectQuery(){
-        return database.createQuery(ArticleTable.NAME,ArticleTable.getSelectQuery());
+        return database.createQuery(ArticleTable.NAME, ArticleTable.getSelectQuery());
     }
 }
