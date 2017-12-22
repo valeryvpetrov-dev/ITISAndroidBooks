@@ -23,7 +23,6 @@
     <FrameLayout
         android:id="@+id/fragment_container"
         android:paddingTop="?attr/actionBarSize"
-        style="@style/FullSize"
-        />
+        style="@style/FullSize" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -100,7 +100,6 @@ public class Presenter {
     }
 
     public void loadPreviousSearchResult(){
-        // TODO select
         loader = loaderManager.create(LOADER_SELECT_PREV,
                 databaseManager.getArticlesSelectQuery()
                         .map(new Func1<SqlBrite.Query, List<Article>>() {
