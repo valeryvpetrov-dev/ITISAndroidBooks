@@ -1,4 +1,4 @@
-package ru.itis.android.books.base;
+package ru.itis.android.books.view.base;
 
 import android.app.Fragment;
 
